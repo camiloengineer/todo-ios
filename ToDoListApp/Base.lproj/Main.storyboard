@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uzu-VL-QKp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Cc3-91-ZQv">
+            <objects>
+                <navigationController id="Uzu-VL-QKp" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K3k-UD-2cO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KzL-F1-7Kw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yEB-u5-g4L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-817" y="100"/>
+        </scene>
+        <!--Tareas-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HQJ-H2-wDl">
+                                <rect key="frame" x="0.0" y="128" width="414" height="410"/>
+                                <subviews>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EgO-aQ-xea" userLabel="SVTable">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OG3-eB-HWI">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </tableView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9YB-z4-htg" userLabel="SVImage">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="410"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hSX-Yo-nXP">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="410"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="todolist" translatesAutoresizingMaskIntoConstraints="NO" id="oEW-05-csS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="350" id="MKP-yL-ctd"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Aún no has agregado ninguna tarea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sj-Qq-O1q">
+                                                        <rect key="frame" x="0.0" y="350" width="414" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="6AC-FF-kiZ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HQJ-H2-wDl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dg1-aU-sRe"/>
+                            <constraint firstAttribute="bottom" secondItem="HQJ-H2-wDl" secondAttribute="bottom" priority="999" id="Ueu-CJ-L7I"/>
+                            <constraint firstAttribute="trailing" secondItem="HQJ-H2-wDl" secondAttribute="trailing" id="UgD-Hd-woi"/>
+                            <constraint firstItem="HQJ-H2-wDl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="a6h-0c-gxy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tareas" id="LEK-QG-xHI" userLabel="Menú">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="rsU-ZB-EBx" userLabel="+">
+                            <imageReference key="image" image="plus.circle.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                <hierarchicalColors>
+                                    <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color systemColor="systemPurpleColor"/>
+                                </hierarchicalColors>
+                            </imageReference>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="add:" destination="BYZ-38-t0r" id="UXh-fp-dC9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="SVTable" destination="EgO-aQ-xea" id="ZmZ-br-Jak"/>
+                        <segue destination="YeN-Rl-0ii" kind="show" identifier="VCToDo" id="EiP-aH-gIt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
+        </scene>
+        <!--View Controller To Do-->
+        <scene sceneID="M6B-vg-TNM">
+            <objects>
+                <viewController id="YeN-Rl-0ii" customClass="ViewControllerToDo" customModule="ToDoListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oIM-9r-VHb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yr-Oe-Z9y">
+                                <rect key="frame" x="16" y="104" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZPT-5p-K7m">
+                                <rect key="frame" x="16" y="130" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prioridad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5b-Tg-Kka">
+                                <rect key="frame" x="16" y="180" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dJw-ml-EnJ">
+                                <rect key="frame" x="16" y="206" width="382" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mySegmentControlAction:" destination="YeN-Rl-0ii" eventType="valueChanged" id="gsY-gp-blb"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wnq-ZD-rgK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wnq-ZD-rgK" firstAttribute="trailing" secondItem="ZPT-5p-K7m" secondAttribute="trailing" constant="16" id="82h-np-aE2"/>
+                            <constraint firstItem="4yr-Oe-Z9y" firstAttribute="top" secondItem="Wnq-ZD-rgK" secondAttribute="top" constant="16" id="D8H-AS-Bb2"/>
+                            <constraint firstItem="4yr-Oe-Z9y" firstAttribute="leading" secondItem="Wnq-ZD-rgK" secondAttribute="leading" constant="16" id="HWn-qV-rP6"/>
+                            <constraint firstItem="Wnq-ZD-rgK" firstAttribute="trailing" secondItem="dJw-ml-EnJ" secondAttribute="trailing" constant="16" id="PMQ-Br-rG3"/>
+                            <constraint firstItem="dJw-ml-EnJ" firstAttribute="leading" secondItem="Wnq-ZD-rgK" secondAttribute="leading" constant="16" id="TVm-Dk-ibD"/>
+                            <constraint firstItem="Z5b-Tg-Kka" firstAttribute="leading" secondItem="Wnq-ZD-rgK" secondAttribute="leading" constant="16" id="UHK-Vj-cJ4"/>
+                            <constraint firstItem="Wnq-ZD-rgK" firstAttribute="trailing" secondItem="Z5b-Tg-Kka" secondAttribute="trailing" constant="16" id="ea1-qG-f85"/>
+                            <constraint firstItem="ZPT-5p-K7m" firstAttribute="top" secondItem="4yr-Oe-Z9y" secondAttribute="bottom" constant="5" id="fvw-IG-j2B"/>
+                            <constraint firstItem="dJw-ml-EnJ" firstAttribute="top" secondItem="Z5b-Tg-Kka" secondAttribute="bottom" constant="5" id="gAp-JD-QNe"/>
+                            <constraint firstItem="ZPT-5p-K7m" firstAttribute="leading" secondItem="Wnq-ZD-rgK" secondAttribute="leading" constant="16" id="kTO-0g-0I4"/>
+                            <constraint firstItem="Z5b-Tg-Kka" firstAttribute="top" secondItem="ZPT-5p-K7m" secondAttribute="bottom" constant="16" id="mx1-Na-Jge"/>
+                            <constraint firstItem="Wnq-ZD-rgK" firstAttribute="trailing" secondItem="4yr-Oe-Z9y" secondAttribute="trailing" constant="16" id="syl-Wm-sA0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JfH-KO-qfs"/>
+                    <connections>
+                        <outlet property="mySegmentedControl" destination="dJw-ml-EnJ" id="LqF-ed-4nr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uJc-3b-HbX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="100"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="todolist" width="429.17800903320312" height="457.23699951171875"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
