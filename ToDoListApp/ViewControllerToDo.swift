@@ -43,5 +43,8 @@ class ViewControllerToDo: UIViewController {
     
     }
     
-
+    @IBAction func saveAction(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
 }
